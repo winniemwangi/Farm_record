@@ -23,17 +23,17 @@ class Mkulima{
     this.farms.push({farmId,farmName,farmer,phone,address})
     }
     this.removeFarm = (farmId) => {
-    let specific = this.farms.find(item => item.farmId ===farmId);
-    let farmIndex = this.farms.indexOf(specific);
+    let spe = this.farms.find(item => item.farmId ===farmId);
+    let farmIndex = this.farms.indexOf(spe);
     this.farms.splice(farmIndex, 1);
     }
     this.updateFarm = function(farmId,newFarmId,newFarmName,newFarmerName,newPhone,newAddress){
-    let specificFarm = this.farms.find(item => item.farmId ===farmId)
-    specificFarm.farmId =newFarmId;
-    specificFarm.farmName =newFarmName;
-    specificFarm.farmer =newFarmerName;
-    specificFarm.phone =newPhone;
-    specificFarm.address =newAddress;
+    let specific_Farm = this.farms.find(item => item.farmId ===farmId)
+    specific_Farm.farmId =newFarmId;
+    specific_Farm.farmName =newFarmName;
+    specific_Farm.farmer =newFarmerName;
+    specific_Farm.phone =newPhone;
+    specific_Farm.address =newAddress;
     }
     this.getFarm = (Id)=>{
     console.log(this.farms.find(object=>object.farmId===Id))
@@ -48,10 +48,10 @@ class Mkulima{
     this.product.splice(productIndex, 1);
     }
     this.updateProduct = function(productId,newProductId,newProductName,newPrice){
-    let specificProduct = this.product.find(item => item.productId ===productId)
-    specificProduct.productId =newProductId;
-    specificProduct.productName = newProductName;
-    specificProduct.price = newPrice;
+    let specific_Product = this.product.find(item => item.productId ===productId)
+    specific_Product.productId =newProductId;
+    specific_Product.productName = newProductName;
+    specific_Product.price = newPrice;
     }
     this.getProduct = (Id)=>{
     console.log(this.product.find(object=>object.productId===Id))
@@ -66,12 +66,12 @@ class Mkulima{
     }
     }
     
-    let farm1 = new Mkulima();
-    farm1.addFarm("001","Winnie","Mwas","9038948", "65C3");
-    farm1.addFarm("002","Kachy","Ngash","293847", "99o4");
-    farm1.addFarm("003","Mamaa","Oyile","2849201", "52d5");
-    console.log(farm1.farms);
+    let farm = new Mkulima();
+    farm.addFarm("001","Winnie","Mwas","9038948", "65C3");
+    farm.addFarm("002","Kachy","Ngash","293847", "99o4");
+    farm.addFarm("003","Mamaa","Oyile","2849201", "52d5");
+    console.log(farm.farms);
     
-    farm1.removeFarm("003");
+    farm.removeFarm("003");
     console.log()
 
